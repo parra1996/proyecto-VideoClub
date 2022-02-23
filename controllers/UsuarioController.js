@@ -43,7 +43,7 @@ UsuarioController.registraUsuario = async (req, res) => {
         let name = req.body.name;
         let age = req.body.age;
         let surname = req.body.surname;
-        let nickname = req.body.nickname;
+        // let nickname = req.body.nickname;
         let email = req.body.email;
         console.log("antes de encriptar",req.body.password);
         let password = bcrypt.hashSync(req.body.password, Number.parseInt(authConfig.rounds)); 
@@ -62,11 +62,11 @@ UsuarioController.registraUsuario = async (req, res) => {
                             [Op.like] : email
                         }
                     },
-                    {
-                        nickname : {
-                            [Op.like] : nickname
-                        }
-                    }
+                    // {
+                    //     nickname : {
+                    //         [Op.like] : nickname
+                    //     }
+                    // }
                 ]
 
             }
@@ -81,7 +81,7 @@ UsuarioController.registraUsuario = async (req, res) => {
                     surname: surname,
                     email: email,
                     password: password,
-                    nickname: nickname
+                    // nickname: nickname
                 }).then(usuario => {
                     res.send(`${usuario.name}, bienvenida a este infierno`);
                 })
@@ -120,6 +120,67 @@ UsuarioController.updateProfile = async (req, res) => {
     }
 
 };
+
+
+UsuarioController.updatePassword = (req,res) => {
+
+    console.log("entramos");
+
+    let id = req.body.id;
+
+    let oldPassword = req.body.oldPassword;
+
+    let newPassword = req.body.newPassword;
+
+    Usuario.findOne({
+        where : { id : id}
+    }).then(usuarioFound => {
+
+        if(usuarioFound){
+
+            if (bcrypt.compareSync(oldPassword, usuarioFound.password)) {
+
+                //En caso de que el Password antiguo SI sea el correcto....
+
+                //1er paso..encriptamos el nuevo password....
+
+                newPassword = bcrypt.hashSync(newPassword, Number.parseInt(authConfig.rounds)); 
+
+                ////////////////////////////////7
+
+                //2do paso guardamos el nuevo password en la base de datos
+
+                let data = {
+                    password: newPassword
+                }
+
+                console.log("esto es data",data);
+                
+                Usuario.update(data, {
+                    where: {id : id}
+                })
+                .then(actualizado => {
+                    res.send(actualizado);
+                })
+                .catch((error) => {
+                    res.status(401).json({ msg: `Ha ocurrido un error actualizando el password`});
+                });
+
+            }else{
+                res.status(401).json({ msg: "Usuario o contraseña inválidos" });
+            }
+
+
+        }else{
+            res.send(`Usuario no encontrado`);
+        }
+
+    }).catch((error => {
+        res.send(error);
+    }));
+
+};
+
 
 UsuarioController.deleteAll = async (req, res) => {
 

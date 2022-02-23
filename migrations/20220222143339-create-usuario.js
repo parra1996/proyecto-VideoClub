@@ -11,6 +11,26 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      
+      age: {
+        type: Sequelize.INTEGER
+      },
+      surname: {
+        type: Sequelize.STRING
+      },
+      email: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: true
+      },
+      password: {
+        type: Sequelize.STRING
+      },
+      rol: {
+        type: Sequelize.BOOLEAN,
+        //este método se usa para dar un valor por defecto
+        defaultValue: false,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

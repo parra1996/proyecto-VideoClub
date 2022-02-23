@@ -8,8 +8,23 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      titulo: {
         type: Sequelize.STRING
+      },
+      sinopsis: {
+        type: Sequelize.STRING
+      },
+      adult: {
+        type: Sequelize.BOOLEAN
+      },
+      popularity: {
+        type: Sequelize.FLOAT
+      },
+      image: {
+        type: Sequelize.STRING
+      },
+      fecha: {
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,
