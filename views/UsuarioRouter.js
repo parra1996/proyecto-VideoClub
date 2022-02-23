@@ -26,7 +26,6 @@ router.put('/:id', auth, UsuarioController.updateProfile);
 //cambiar contraseña
 router.put('/newpassword', auth, UsuarioController.updatePassword);
 
-
 //Borramos a todos los usuarios
 router.delete('/', isAdmin, UsuarioController.deleteAll);
 

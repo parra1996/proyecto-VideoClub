@@ -10,17 +10,13 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      this.hasMany(models.Order, {
-        foreignKey: 'peliculaId'
-      });
+      //aqui tiene que ir pedidos
     }
   }
   Pelicula.init({
     titulo: DataTypes.STRING,
     sinopsis: DataTypes.STRING,
     adult: DataTypes.BOOLEAN,
-    popularity: DataTypes.FLOAT,
-    image: DataTypes.STRING,
     fecha: DataTypes.DATE
   }, {
     sequelize,

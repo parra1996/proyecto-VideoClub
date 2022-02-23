@@ -62,13 +62,7 @@ UsuarioController.registraUsuario = async (req, res) => {
                             [Op.like] : email
                         }
                     },
-                    // {
-                    //     nickname : {
-                    //         [Op.like] : nickname
-                    //     }
-                    // }
                 ]
-
             }
 
         }).then(datosRepetidos => {
@@ -81,7 +75,6 @@ UsuarioController.registraUsuario = async (req, res) => {
                     surname: surname,
                     email: email,
                     password: password,
-                    // nickname: nickname
                 }).then(usuario => {
                     res.send(`${usuario.name}, bienvenida a este infierno`);
                 })

@@ -9,11 +9,63 @@ const PeliculasController = {};
 
 //Funciones del controlador
 
-PeliculasController.traePeliculas = (req, res) => {
+PeliculasController.traePeliculas = async (req, res) => {
 
+    let pedido = req.query.pedido;
+
+    let todasPeliculas = await axios.get(`https://api.themoviedb.org/3/movie/${pedido}?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-US`);
+
+     res.send(todasPeliculas.data);
 };
 
 PeliculasController.registraPelicula = (req, res) => {
+     
+    //Registrando un usuario
+    
+    let titulo = req.body.titulo;
+    let sinopsis = req.body.sinospsis;
+    let adult = req.body.adult;
+    let fecha = req.body.fecha;
+    
+    //Comprobación de errores.....
+    
+    //Guardamos en sequelize el usuario
+
+    Pelicula.findAll({
+        where : {
+
+            [Op.or] : [
+                {
+                    titulo : {
+                        [Op.like] : titulo
+                    }
+                },
+            ]
+        }
+
+    }).then(datosRepetidos => {
+
+        if(datosRepetidos == 0){
+
+                Pelicula.create({
+                titulo: titulo,
+                sinopsis: sinopsis,
+                adult: adult,
+                fecha : fecha
+            }).then(pelicula => {
+                res.send(`${pelicula.titulo}, agregada a la base de datos`);
+            })
+            .catch((error) => {
+                res.send(error);
+            });
+
+        }else {
+            res.send("esta pelicula ya existe en nuestra base de datos");
+        }
+    }).catch(error => {
+        res.send(error)
+    });
+
 
 };
 
