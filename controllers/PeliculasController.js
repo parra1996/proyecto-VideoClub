@@ -4,12 +4,14 @@ const { Op } = require("sequelize");
 const { compareSync } = require("bcrypt");
 
 
+
+
 const PeliculasController = {};
 
 
 //Funciones del controlador
 
-PeliculasController.traePeliculas = async (req, res) => {
+PeliculasController.importaPeliculas = async (req, res) => {
 
     let pedido = req.query.pedido;
 
@@ -18,19 +20,44 @@ PeliculasController.traePeliculas = async (req, res) => {
      res.send(todasPeliculas.data);
 };
 
+PeliculasController.traePelicula = (req,res) => {
+      //Búsqueda trayendo a todos los usuarios
+      Pelicula.findAll()
+      .then(data => {
+  
+          res.send(data)
+      });
+}
+
+PeliculasController.traerPeliculaId = (req, res) => {
+    //Búsqueda buscando una Id
+    Pelicula.findByPk(req.params.id)
+    .then(data => {
+        res.send(data)
+    });
+};
+
+PeliculasController.traerPeliculaTitulo = (req, res) => {
+    //Búsqueda comparando un campo
+    Pelicula.findOne({ where : { titulo : req.params.titulo }})
+    .then(data => {
+        console.log(data)
+        res.send(data)
+    });
+}
+
 PeliculasController.registraPelicula = (req, res) => {
      
     //Registrando un usuario
     
     let titulo = req.body.titulo;
-    let sinopsis = req.body.sinospsis;
+    let sinopsis = req.body.sinopsis;
     let adult = req.body.adult;
     let fecha = req.body.fecha;
     
     //Comprobación de errores.....
     
     //Guardamos en sequelize el usuario
-
     Pelicula.findAll({
         where : {
 
@@ -69,7 +96,7 @@ PeliculasController.registraPelicula = (req, res) => {
 
 };
 
-PeliculasController.peliculasTitulo = async (req, res) => {
+PeliculasController.peliculasImportadasTitulo = async (req, res) => {
 
     let busqueda = req.query.criterio;
 

@@ -32,6 +32,7 @@ UsuarioController.traerUsuarioEmail = (req, res) => {
     //Búsqueda comparando un campo
     Usuario.findOne({ where : { email : req.params.email }})
     .then(data => {
+        console.log(data)
         res.send(data)
     });
 }
