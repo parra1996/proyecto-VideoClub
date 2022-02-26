@@ -9,4 +9,8 @@ router.post('/', PedidosController.nuevoPedido);
 
 router.get('/', PedidosController.todosPedidos);
 
+router.delete('/:id', PedidosController.deleteById);
+
+
+
 module.exports = router;

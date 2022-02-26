@@ -22,7 +22,8 @@ module.exports = (sequelize, DataTypes) => {
     precio: DataTypes.INTEGER,
     peliculaId: DataTypes.INTEGER,
     usuarioId: DataTypes.INTEGER,
-    fecha: DataTypes.DATE  }, 
+    fecha: DataTypes.DATE,
+    fechaDev: DataTypes.DATE }, 
   {
     sequelize,
     modelName: 'Pedido',

@@ -11,14 +11,14 @@ const PeliculasController = {};
 
 //Funciones del controlador
 
-PeliculasController.importaPeliculas = async (req, res) => {
+// PeliculasController.importaPeliculas = async (req, res) => {
 
-    let pedido = req.query.pedido;
+//     let pedido = req.query.pedido;
 
-    let todasPeliculas = await axios.get(`https://api.themoviedb.org/3/movie/${pedido}?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-US`);
+//     let todasPeliculas = await axios.get(`https://api.themoviedb.org/3/movie/${pedido}?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-US`);
 
-     res.send(todasPeliculas.data);
-};
+
+// };
 
 PeliculasController.traePelicula = (req,res) => {
       //Búsqueda trayendo a todos los usuarios
@@ -193,5 +193,28 @@ PeliculasController.peliculasAdultas = (req,res) => {
     })
 
 }
+
+
+PeliculasController.deleteById = async (req, res) => {
+
+    let id = req.params.id;
+
+    try {
+
+        Peliculas.destroy({
+            where : { id : id },
+            truncate : false
+        })
+        .then(usuarioEliminado => {
+            console.log(usuarioEliminado);
+            res.send(`El usuario con la id ${id} ha sido eliminado`);
+        })
+
+    } catch (error) {
+        res.send(error);
+    }
+
+};
+
 
 module.exports = PeliculasController;

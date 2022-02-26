@@ -11,10 +11,11 @@ PedidosController.nuevoPedido = (req,res) => {
     console.log("este es body",body)
 
     Pedido.create({
-        price: body.price,
+        precio: body.price,
         peliculaId: body.peliculaId,
         usuarioId: body.usuarioId,
-        fecha: body.fecha
+        fecha: body.fecha,
+        fechaDev: body.fecha
     })
     .then(pedido => {
         if(pedido){
@@ -30,10 +31,9 @@ PedidosController.nuevoPedido = (req,res) => {
 
 PedidosController.todosPedidos = async (req,res) => {
 
-    let consulta = `SELECT usuarios.name AS nombre, peliculas.titulo AS titulo , peliculas.popularity AS top_rated, usuarios.nickname AS Nick, usuarios.email AS correo
+    let consulta = `SELECT usuarios.name AS nombre, peliculas.titulo AS titulo, usuarios.email AS correo
     FROM usuarios INNER JOIN pedidos 
-    ON usuarios.id = pedidos.usuarioId INNER JOIN peliculas 
-    ON peliculas.id = pedidos.peliculaId WHERE popularity > 6 AND name LIKE '%Ra%' ORDER BY top_rated DESC`; 
+    ON usuarios.id = pedidos.usuarioId INNER JOIN peliculas`; 
 
     let resultado = await Pedido.sequelize.query(consulta,{
         type: Pedido.sequelize.QueryTypes.SELECT});
@@ -42,5 +42,24 @@ PedidosController.todosPedidos = async (req,res) => {
         res.send(resultado);
     }
 
+}
+
+PedidosController.deleteById = (req,res) => {
+    let id = req.params.id;
+
+    try {
+
+        Pedido.destroy({
+            where : { id : id },
+            truncate : false
+        })
+        .then(usuarioEliminado => {
+            console.log(usuarioEliminado);
+            res.send(`El pedido con la id ${id} ha sido eliminado`);
+        })
+
+    } catch (error) {
+        res.send(error);
+    }
 }
 module.exports = PedidosController;

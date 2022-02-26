@@ -10,5 +10,4 @@ router.use('/usuarios', UsuarioRouter);
 router.use('/peliculas', PeliculasRouter);
 router.use('/pedidos', PedidosRouter);
 
-
 module.exports = router;

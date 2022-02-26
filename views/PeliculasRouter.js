@@ -11,7 +11,7 @@ const PeliculasController = require('../controllers/PeliculasController');
 //CRUD RESTful
 
 //Leer todas las peliculas
-router.get('/', auth, PeliculasController.importaPeliculas);
+// router.get('/', auth, PeliculasController.importaPeliculas);
 
 router.get('/todas', auth, PeliculasController.traePelicula);
 
@@ -30,6 +30,9 @@ router.get('/titulo',auth, PeliculasController.peliculasImportadasTitulo);
 
 //Búsqueda de novedades
 router.get('/novedades', auth,PeliculasController.traeNovedades);
+
+router.delete('/:id', isAdmin, PeliculasController.deleteById);
+
 
 
 module.exports = router;
