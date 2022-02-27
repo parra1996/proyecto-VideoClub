@@ -26,6 +26,7 @@ UsuarioController.traerUsuarioId = (req, res) => {
     .then(data => {
         res.send(data)
     });
+    
 };
 
 UsuarioController.traerUsuarioEmail = (req, res) => {
@@ -116,7 +117,7 @@ UsuarioController.updateProfile = async (req, res) => {
 };
 
 
-UsuarioController.updatePassword = (req,res) => {
+UsuarioController.updatePassword = async (req,res) => {
 
     console.log("entramos");
 

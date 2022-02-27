@@ -1,15 +1,20 @@
 
+const { Router } = require('express');
 const express = require('express');
 const router = express.Router();
+const auth = require("../middlewares/auth");
+const isAdmin = require("../middlewares/isAdmin");
 
 const PedidosController = require('../controllers/PedidosController');
 
 
 router.post('/', PedidosController.nuevoPedido);
 
-router.get('/', PedidosController.todosPedidos);
+router.get('/', auth, PedidosController.todosPedidos);
 
-router.delete('/:id', PedidosController.deleteById);
+router.delete('/:id', auth, isAdmin, PedidosController.deleteById);
+
+router.delete('/', auth, isAdmin, PedidosController.deleteAll);
 
 
 

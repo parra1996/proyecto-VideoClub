@@ -201,13 +201,13 @@ PeliculasController.deleteById = async (req, res) => {
 
     try {
 
-        Peliculas.destroy({
+        Pelicula.destroy({
             where : { id : id },
             truncate : false
         })
-        .then(usuarioEliminado => {
-            console.log(usuarioEliminado);
-            res.send(`El usuario con la id ${id} ha sido eliminado`);
+        .then(peliculaEliminado => {
+            console.log(peliculaEliminado);
+            res.send(`La pelicula con la id ${id} ha sido eliminada`);
         })
 
     } catch (error) {

@@ -62,4 +62,21 @@ PedidosController.deleteById = (req,res) => {
         res.send(error);
     }
 }
+
+PedidosController.deleteAll = (req,res) => {
+    
+    try {
+
+        Pedido.destroy({
+            where : {},
+            truncate : false
+        })
+        .then(PedidosEliminados => {
+            res.send(`Se han eliminado ${PedidosEliminados} pedidos`);
+        })
+
+    } catch (error) {
+        res.send(error);
+    }
+}
 module.exports = PedidosController;
