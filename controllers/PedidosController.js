@@ -11,7 +11,7 @@ PedidosController.nuevoPedido = (req,res) => {
     console.log("este es body",body)
 
     Pedido.create({
-        precio: body.price,
+        precio: body.precio,
         peliculaId: body.peliculaId,
         usuarioId: body.usuarioId,
         fecha: body.fecha,
@@ -31,18 +31,22 @@ PedidosController.nuevoPedido = (req,res) => {
 
 PedidosController.todosPedidos = async (req,res) => {
 
-    let consulta = `SELECT usuarios.name AS nombre, peliculas.titulo AS titulo, usuarios.email AS correo
-    FROM usuarios INNER JOIN pedidos 
-    ON usuarios.id = pedidos.usuarioId INNER JOIN peliculas`; 
+    // let consulta = `SELECT usuarios.name AS nombre, peliculas.titulo AS titulo, usuarios.email AS correo
+    // FROM usuarios INNER JOIN pedidos 
+    // ON usuarios.id = pedidos.usuarioId INNER JOIN peliculas`; 
 
-    let resultado = await Pedido.sequelize.query(consulta,{
-        type: Pedido.sequelize.QueryTypes.SELECT});
+    // let resultado = await Pedido.sequelize.query(consulta,{
+    //     type: Pedido.sequelize.QueryTypes.SELECT});
 
-    if(resultado){
-        res.send(resultado);
-    }
+    // if(resultado){
+    //     res.send(resultado);
+    // }
 
-}
+        Pedido.findAll()
+        .then(data => {
+            res.send(data)
+        });
+    };
 
 PedidosController.deleteById = (req,res) => {
     let id = req.params.id;
