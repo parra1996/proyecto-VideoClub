@@ -31,7 +31,7 @@ nos permite ejecutar sentencias SQL a travez de MySQL Workbench.
     
  # Habiendo dicho que use el patron MVC mostrare el de cada tabla usado.
  
-## Estos son los endpoints de USUARIOS y sus funciones van redirigidos a la carpeta controller y su fichero propio, en este caso UsuaiosControllers donde veras sus siguientes funciones.
+## Estos son los endpoints de USUARIOS y sus funciones van redirigidos a la carpeta controller y su fichero propio, en este caso UsuariosControllers donde veras sus siguientes funciones.
 
 ![](img/users.png)
 
@@ -102,7 +102,7 @@ Una de las razones por las que use SQL para mi BBDD fue porque puedo hacer tabla
 ![](img/tablas.png)
 
 # Dev: Juan Pablo Parra Labarca.
-# Email: parrajp1996@gail.com.
+# Email: parrajp1996@gmail.com.
 
 
 
