@@ -1,0 +1,251 @@
+<!doctype html><html lang=es>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,minimum-scale=1,initial-scale=1">
+<title>Cómo instalar Node en Mac, Linux y Windows</title>
+<link rel=preconnect href=https://waterboa.midu.dev>
+<link rel="preconnect dns-prefetch" href=https://waterboa.midu.dev>
+<link rel="preconnect dns-prefetch" href=https://i3.ytimg.com>
+<link rel="preconnect dns-prefetch" href=https://res.cloudinary.com>
+<style>:root{--c-topic:#000;--fz-aside:14px;--fz-section-title:18px;--mw-document:1200px;--p-header-bottom:16px;--p-separation:96px;--p-u-center:0 32px;--w-aside:320px}html{box-sizing:border-box;scroll-behavior:smooth}*,*:after,*:before{box-sizing:inherit}fieldset{border:0;margin:0;padding:0}*::selection{background:rgba(6,125,247,.15)}pre::selection,code::selection{background:#09f;text-shadow:none;opacity:.3}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;display:block;margin:0 auto;min-height:100vh;overflow-x:hidden;width:100%;-webkit-font-smoothing:antialiased}blockquote{margin:0}h1,h2,h3,h4,figure,p,ul,li{margin:0;padding:0}a,a:hover{text-decoration:none}img{width:100%;height:auto}iframe{border:0}.u-none{display:none!important}.u-center{max-width:var(--mw-document);margin:0 auto;padding:var(--p-u-center)}.section-title{color:#111;font-weight:700;font-size:var(--fz-section-title);padding-bottom:8px}.section-description{color:#555;font-size:14px;line-height:1.5}.header{background:#f1f5f9;margin-bottom:32px}.header-inner{align-items:center;display:flex;justify-content:space-between;padding-top:16px;padding-bottom:var(--p-header-bottom)}#searchbox{display:none}@media(min-width:600px){#searchbox{display:block}}#nav{align-items:center;display:flex}#nav a{border:1px solid transparent;color:#222;padding:10px 6px}@media(min-width:600px){#nav a{padding:10px 12px}}#nav .page-links{font-size:var(--fz-page-links)}#nav a:hover{background:#fff;color:#000;border-radius:6px;border:1px solid #09f}.body{display:flex}hr{background:#ccc;border:0;height:1px;margin-bottom:32px}hr.section-separation{background:0 0}footer{background:#f1f5f9;padding-top:32px;text-align:center;padding:64px 0 86px;position:relative}footer .u-center{padding-top:32px}footer a{color:#555;margin-right:16px}footer a:hover{color:#222}.footer-emote{width:36px;height:36px;object-fit:contain;position:absolute;bottom:0;left:0;right:0;margin:auto}svg{vertical-align:middle}#article{max-width:800px;margin:0 auto;width:100%}#article-content-wrapper{display:flex}#article-content{flex:1 1;padding-bottom:32px}#article-content blockquote{background:#fdffb7;border-radius:6px;padding:16px;margin-top:48px;margin-bottom:32px;box-shadow:0 20px 20px rgba(100,100,100,.1)}#article-content blockquote p{color:#000;font-size:16px;margin:0;padding:0}#article-content p,#article-content li{color:#333;font-size:18px;line-height:28px;margin:0 auto;margin-bottom:32px;word-break:break-word}#article-content ul+.highlight{margin-top:24px}#article-content p+ul{margin-top:-16px}#article-content ul{padding-left:16px;padding-bottom:16px}#article-content li{color:#555;margin-bottom:4px;padding-bottom:0}#article-content h2,#article-content h3,#article-content h4,#article-content h5{color:#0068b8;font-size:24px;font-weight:600;margin:48px 0 24px}#article-content h3{color:#0e578f;font-size:22px;margin-top:16px}#article-content h4{color:#09395e;font-size:20px;margin-top:16px}#article-content a{border-bottom:2px solid #dff2ff;color:#0081d7;opacity:7}#article-content a:hover{background-color:#d8f0ff;border-bottom-color:#00f;color:#00f;opacity:1}#article iframe{margin-bottom:16px}.youtube-iframe,.highlight{box-shadow:0 20px 60px rgba(0,0,0,.3)}#logo,#logo img{height:44px;transition:transform ease .3s;width:auto}#logo:hover{transform:scale(1.1)}.button{background-color:#1890ff;border-color:#1890ff;border-radius:4px;border:0;box-shadow:0 2px #0000000b;color:#fff;cursor:pointer;font-size:16px;height:40px;line-height:38px;outline:0;padding:0 15px;text-align:center;text-decoration:none;text-shadow:0 -1px 0 rgba(0,0,0,.12);width:100%}.button:hover{background:#006fba;border-color:#006fba}.input{background-color:#fff;background-image:none;border-radius:4px;border:1px solid #d9d9d9;box-sizing:border-box;color:rgba(0,0,0,.65);display:inline-block;font-feature-settings:'tnum';font-size:14px;font-variant:tabular-nums;height:32px;line-height:32px;list-style:none;margin:0;outline:0;padding:4px 11px;transition:all .3s;width:100%}.button:focus,.input:focus{border-color:#40a9ff;box-shadow:0 0 0 4px rgba(24,144,255,.2)}#aside-sticky{top:48px;position:sticky}#newsletter-form{margin-bottom:32px;padding:24px;border:2px solid #eee;border-radius:5px;text-align:center}#newsletter-form small{padding-bottom:12px;display:block}#newsletter-form h3{margin-bottom:12px}#newsletter-form input{border-radius:5000px;padding-left:16px}#newsletter-form button{position:absolute;right:0;width:100px;overflow:hidden;bottom:0;height:32px;cursor:pointer;font-weight:700;background:#09f;color:#fff;border-radius:0 5000px 5000px 0;border:0;top:0}#article-header{align-items:center;display:flex;margin-bottom:36px;position:relative}#article-header h1{color:#111;font-size:36px;line-height:1.1;font-weight:600}#article-header picture{height:200px;opacity:.1;position:absolute;right:0;width:200px}#article-header img{object-fit:contain;height:100%;width:100%}@media(min-width:700px){#article-header picture,#article-header img{width:100px;height:100px;margin-right:16px;object-fit:contain;position:static;opacity:1}}#article-meta{color:#777;font-size:12px;margin-top:8px}#article-meta a{border:0;color:#000;display:block;font-weight:600;margin-top:8px;opacity:.7}@media(min-width:600px){#article-meta a{display:inline-block;margin:0}}#article-meta a:hover{background:0 0;opacity:1;text-decoration:underline}#article-meta svg{margin-left:4px;width:18px}#article-pagination{display:flex;flex-wrap:wrap;justify-content:center;margin-top:48px;text-align:center}#article-pagination a{align-items:center;border-radius:6px;border:2px solid #eee;color:#000;font-weight:500;display:flex;flex-direction:column;justify-content:center;margin:16px;max-width:300px;padding:24px 16px;transition:all .2s ease}#article-pagination a:hover,#article-pagination a:focus{background:#e8f6ff;border:2px solid #09f;color:#000;text-decoration:none}#article-pagination img{width:64px;margin-bottom:16px}figure{margin:auto;padding-bottom:16px}ul+figure{margin-top:16px}figure+ul{margin-top:16px}figure img+figcaption{padding-top:4px}figcaption{color:#666;display:block;font-size:14px;font-style:italic;text-align:center}figure.center{max-width:500px}figure.left{float:left;max-width:50%;padding:0 16px 0 0}figure.left p{padding:0}figure.left img{height:auto;width:100%}#lightbox{position:fixed;z-index:9999;width:100%;height:100%;text-align:center;top:0;left:0;background:rgba(0,0,0,.8)}#lightbox section{align-items:center;display:flex;height:100vh;max-width:90%;width:100%;margin:0 auto}#lightbox div{position:relative;padding-bottom:56.25%;height:0;width:100%}#lightbox a{cursor:alias;left:0;position:absolute;width:100%;height:100%}#lightbox svg{position:absolute;top:16px;right:16px}#lightbox iframe{position:absolute;top:0;left:0;width:100%;height:100%}#aside{flex:0 0 var(--w-aside)}#aside .cover{aspect-ratio:16/9}#aside a{border-radius:4px;display:block;outline:0;position:relative;margin-left:-8px;padding:8px;text-align:left}#aside a:hover{background:#eee;color:#111}#aside img{border-radius:4px;object-fit:cover}#aside h4{color:#333;font-size:14px;font-weight:600;line-height:140%}.youtube-title{align-items:center;display:flex;justify-content:space-between}@media screen and (max-width:1300px){:root{--mw-document:100%}}@media screen and (max-width:1023px){:root{--p-separation:0;--w-aside:100%}.body,#article-content-wrapper{flex-direction:column}}@media screen and (max-width:700px){:root{--p-u-center:0 16px;--p-header-bottom:16px}#nav .page-links{display:none}#article-header{display:block!important}}lite-youtube{background-color:#000;position:relative;display:block;contain:content;background-position:50%;background-size:cover;cursor:pointer;max-width:720px}lite-youtube::before{content:'';display:block;position:absolute;top:0;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==);background-position:top;background-repeat:repeat-x;height:110px;padding-bottom:50px;width:100%;transition:all .2s cubic-bezier(0,0,.2,1)}lite-youtube::after{content:"";display:block;padding-bottom:56.25%}lite-youtube>iframe{width:100%;height:100%;position:absolute;top:0;left:0;border:0}lite-youtube>.lty-playbtn{width:68px;height:48px;position:absolute;transform:translate3d(-50%,-50%,0);top:50%;left:50%;z-index:1;background-color:transparent;background-image:url('data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 68 48%22%3E%3Cpath fill=%22red%22 fill-opacity=%22.8%22 d=%22M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05.0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24S67.94 13.05 66.52 7.74z%22/%3E%3Cpath d=%22M45 24 27 14V34%22 fill=%22%23fff%22/%3E%3C/svg%3E');filter:grayscale(100%);transition:filter .1s cubic-bezier(0,0,.2,1);border:none}lite-youtube:hover>.lty-playbtn,lite-youtube .lty-playbtn:focus{filter:none}lite-youtube.lyt-activated{cursor:unset}lite-youtube.lyt-activated::before,lite-youtube.lyt-activated>.lty-playbtn{opacity:0;pointer-events:none}.lyt-visually-hidden{clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px}twitter-widget{margin:0 auto}.twitter-tweet{margin:0 auto}.ais-InstantSearch{position:relative}.ais-SearchBox-input{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:#fff;border:1px solid #eee;border-radius:5000px;box-shadow:none;caret-color:#5a5e9a;color:#23263b;flex:1;font:inherit;max-width:100%;padding-left:2.5rem;margin-right:1rem;transition:box-shadow .2s ease}.ais-SearchBox-input:focus{outline:0;box-shadow:0 0 10px rgb(0 153 255/.3);border:1px solid transparent}#hits{position:absolute;z-index:2}.ais-SearchBox-input::-ms-clear,.ais-SearchBox-input::-ms-reveal{display:none;width:0;height:0}.ais-SearchBox-input::-webkit-search-cancel-button,.ais-SearchBox-input::-webkit-search-decoration,.ais-SearchBox-input::-webkit-search-results-button,.ais-SearchBox-input::-webkit-search-results-decoration{display:none}.ais-SearchBox-form{display:flex;font-size:.875rem;height:2rem;line-height:1rem;position:relative;width:100%}.ais-SearchBox-form::before{background:url("data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2309f%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2211%22 cy=%2211%22 r=%228%22/%3E%3Cline x1=%2221%22 y1=%2221%22 x2=%2216.65%22 y2=%2216.65%22/%3E%3C/svg%3E")repeat;content:"";height:1rem;left:1rem;margin-top:-.5rem;position:absolute;top:50%;width:1rem}.ais-SearchBox-loadingIndicator[hidden],#hits[hidden],.ais-SearchBox-reset[hidden],.ais-SearchBox-submit{display:none}.ais-SearchBox-loadingIndicator,.ais-SearchBox-reset{align-items:center;background:0 0;border-radius:50%;border:0;cursor:pointer;display:flex;fill:#09f;height:20px;justify-content:center;position:absolute;right:1.5rem;top:50%;transform:translateY(-50%);width:20px}.ais-Hits-list{margin:0;padding:0;list-style:none}.ais-Hits-item{align-items:center;background:#fff;box-shadow:0 0 0 1px rgb(35 38 59/5%),0 1px 3px rgb(35 38 59/15%);display:flex;font-size:.875rem;font-weight:400;line-height:1.25rem;padding:.5rem}.ais-Hits-item em{background:#d0ecff}</style>
+<link rel=preload as=image href=/logo.png>
+<link rel=preload as=script href=https://midu.dev/js/t.js>
+<script src=https://midu.dev/js/t.js data-site=YZRWTFHZ defer></script>
+<meta name=description content="Instala paso a paso Node en Linux y Mac usando nvm y en Windows usando nvm-windows">
+<link rel=canonical href=https://midu.dev/como-instalar-node-en-mac-y-windows/>
+<link rel=icon href=/favicon/favicon.ico type=image/x-icon>
+<link rel=apple-touch-icon sizes=180x180 href=/favicon/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon/favicon-16x16.png>
+<meta name=apple-mobile-web-app-title content="midu.dev">
+<meta name=application-name content="midu.dev">
+<meta name=theme-color content="#0099ff">
+<meta property="og:url" content="https://midu.dev/como-instalar-node-en-mac-y-windows/">
+<meta property="og:type" content="article">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:creator content="@midudev">
+<meta name=twitter:domain content="midu.dev">
+<meta name=twitter:image content="https://midu.dev//images/og/como-instalar-node-en-mac-y-windows.png">
+<meta name=twitter:site content="@midudev">
+<link rel=manifest href=/manifest.json>
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Cómo instalar Node en Mac, Linux y Windows">
+<meta property="og:image" content="https://midu.dev//images/og/como-instalar-node-en-mac-y-windows.png">
+<meta property="og:description" content="Instala paso a paso Node en Linux y Mac usando nvm y en Windows usando nvm-windows">
+<meta property="og:site_name" content="midu.dev">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"NewsArticle","headline":"Cómo instalar Node en Mac, Linux y Windows","image":["https:\/\/midu.dev\/\/images\/og\/como-instalar-node-en-mac-y-windows.png"],"datePublished":"2020-08-17T00:00:00Z"}</script>
+</head>
+<body>
+</div>
+<header class=header>
+<div class="header-inner u-center">
+<a id=logo href=/>
+<img decoding=async alt="midudev logo" width=155 height=44 src=/logo.png>
+</a>
+<nav id=nav>
+<div>
+<div id=searchbox>
+<div class=ais-SearchBox>
+<form role=search class=ais-SearchBox-form novalidate>
+<input class=ais-SearchBox-input type=search placeholder=Buscar... autocomplete=off autocorrect=off autocapitalize=off spellcheck=false maxlength=512>
+<button class=ais-SearchBox-reset type=reset title="Clear the search query." hidden>
+<svg class="ais-SearchBox-resetIcon" viewBox="0 0 20 20" width="10" height="10"><path d="M8.114 10 .944 2.83.0 1.885 1.886.0l.943.943L10 8.113l7.17-7.17.944-.943L20 1.886l-.943.943-7.17 7.17 7.17 7.17.943.944L18.114 20l-.943-.943-7.17-7.17-7.17 7.17-.944.943L0 18.114l.943-.943L8.113 10z"/></svg></button>
+<span class=ais-SearchBox-loadingIndicator hidden><svg class="ais-SearchBox-loadingIcon" width="16" height="16" viewBox="0 0 38 38" stroke="#444"><g fill="none" fillrule="evenodd"><g transform="translate(1 1)" strokewidth="2"><circle strokeopacity=".5" cx="18" cy="18" r="18"/><path d="M36 18c0-9.94-8.06-18-18-18"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"/></path></g></g></svg></span></form>
+</div>
+</div>
+<div id=hits>
+<div class=ais-Hits>
+<ol class=ais-Hits-list></ol>
+</div>
+</div>
+</div>
+<a href=https://twitch.tv/midudev target=_blank rel="noopener nofollow" aria-label="Sígueme en Twitch"><svg viewBox="0 0 2400 2800" height="24" width="28"><style>.twitch-st1{fill:#9146ff}</style><path fill="#fff" d="M22e2 13e2l-4e2 4e2h-4e2l-350 350v-350H6e2V2e2h16e2z"/><g><path class="twitch-st1" d="M5e2.0.0 5e2v18e2h6e2v5e2l5e2-5e2h4e2l9e2-9e2V0H5e2zm17e2 13e2-4e2 4e2h-4e2l-350 350v-350H6e2V2e2h16e2v11e2z"/><path class="twitch-st1" d="M17e2 550h2e2v6e2h-2e2zm-550 0h2e2v6e2h-2e2z"/></g></svg>
+</a>
+<a href="https://www.youtube.com/c/midudev?sub_confirmation=1" target=_blank rel="noopener nofollow" aria-label="Suscríbete al canal de midudev"><svg viewBox="0 0 24 24" width="24"><path d="M23.495 6.205a3.007 3.007.0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007.0 00.527 6.205 31.247 31.247.0 00.005 12.01a31.247 31.247.0 00.522 5.783 3.007 3.007.0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506.0 9.396-.502a3.007 3.007.0 002.088-2.088 31.247 31.247.0 00.5-5.783 31.247 31.247.0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" fill="red"/></svg>
+</a>
+<a href=https://www.instagram.com/midu.dev/ target=_blank rel="noopener nofollow" aria-label="Sígueme en Instagram"><svg viewBox="0 0 132.004 132" width="24"><defs><radialGradient id="c" cx="158.429" cy="578.088" r="65" fx="158.429" fy="578.088" gradientTransform="matrix(0 -1.98198 1.8439 0 -1031.402 454.004)" gradientUnits="userSpaceOnUse" xlink:href="#a"/><radialGradient id="d" cx="147.694" cy="473.455" r="65" fx="147.694" fy="473.455" gradientTransform="matrix(.17394 .86872 -3.5818 .71718 1648.348 -458.493)" gradientUnits="userSpaceOnUse" xlink:href="#b"/><linearGradient id="b"><stop offset="0" stop-color="#3771c8"/><stop offset=".128" stop-color="#3771c8"/><stop offset="1" stop-color="#60f" stop-opacity="0"/></linearGradient><linearGradient id="a"><stop offset="0" stop-color="#fd5"/><stop offset=".1" stop-color="#fd5"/><stop offset=".5" stop-color="#ff543e"/><stop offset="1" stop-color="#c837ab"/></linearGradient></defs><path fill="url(#c)" d="M65.03.0C37.888.0 29.95.028 28.407.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468C4 13.126 1.5 18.394.595 24.656c-.44 3.04-.568 3.66-.594 19.188-.01 5.176.0 11.988.0 21.125.0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42.0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28 7.79-2.01 14.24-7.29 17.75-14.53 1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81.0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624C116.9 4 111.64 1.5 105.372.596 102.335.157 101.73.027 86.19.0H65.03z" transform="translate(1.004 1)"/><path fill="url(#d)" d="M65.03.0C37.888.0 29.95.028 28.407.156c-5.57.463-9.036 1.34-12.812 3.22-2.91 1.445-5.205 3.12-7.47 5.468C4 13.126 1.5 18.394.595 24.656c-.44 3.04-.568 3.66-.594 19.188-.01 5.176.0 11.988.0 21.125.0 27.12.03 35.05.16 36.59.45 5.42 1.3 8.83 3.1 12.56 3.44 7.14 10.01 12.5 17.75 14.5 2.68.69 5.64 1.07 9.44 1.25 1.61.07 18.02.12 34.44.12 16.42.0 32.84-.02 34.41-.1 4.4-.207 6.955-.55 9.78-1.28 7.79-2.01 14.24-7.29 17.75-14.53 1.765-3.64 2.66-7.18 3.065-12.317.088-1.12.125-18.977.125-36.81.0-17.836-.04-35.66-.128-36.78-.41-5.22-1.305-8.73-3.127-12.44-1.495-3.037-3.155-5.305-5.565-7.624C116.9 4 111.64 1.5 105.372.596 102.335.157 101.73.027 86.19.0H65.03z" transform="translate(1.004 1)"/><path fill="#fff" d="M66.004 18c-13.036.0-14.672.057-19.792.29-5.11.234-8.598 1.043-11.65 2.23-3.157 1.226-5.835 2.866-8.503 5.535-2.67 2.668-4.31 5.346-5.54 8.502-1.19 3.053-2 6.542-2.23 11.65C18.06 51.327 18 52.964 18 66s.058 14.667.29 19.787c.235 5.11 1.044 8.598 2.23 11.65 1.227 3.157 2.867 5.835 5.536 8.503 2.667 2.67 5.345 4.314 8.5 5.54 3.054 1.187 6.543 1.996 11.652 2.23 5.12.233 6.755.29 19.79.29 13.037.0 14.668-.057 19.788-.29 5.11-.234 8.602-1.043 11.656-2.23 3.156-1.226 5.83-2.87 8.497-5.54 2.67-2.668 4.31-5.346 5.54-8.502 1.18-3.053 1.99-6.542 2.23-11.65.23-5.12.29-6.752.29-19.788s-.06-14.672-.29-19.792c-.24-5.11-1.05-8.598-2.23-11.65-1.23-3.157-2.87-5.835-5.54-8.503-2.67-2.67-5.34-4.31-8.5-5.535-3.06-1.187-6.55-1.996-11.66-2.23-5.12-.233-6.75-.29-19.79-.29zm-4.306 8.65c1.278-.002 2.704.0 4.306.0 12.816.0 14.335.046 19.396.276 4.68.214 7.22.996 8.912 1.653 2.24.87 3.837 1.91 5.516 3.59 1.68 1.68 2.72 3.28 3.592 5.52.657 1.69 1.44 4.23 1.653 8.91.23 5.06.28 6.58.28 19.39s-.05 14.33-.28 19.39c-.214 4.68-.996 7.22-1.653 8.91-.87 2.24-1.912 3.835-3.592 5.514-1.68 1.68-3.275 2.72-5.516 3.59-1.69.66-4.232 1.44-8.912 1.654-5.06.23-6.58.28-19.396.28-12.817.0-14.336-.05-19.396-.28-4.68-.216-7.22-.998-8.913-1.655-2.24-.87-3.84-1.91-5.52-3.59-1.68-1.68-2.72-3.276-3.592-5.517-.657-1.69-1.44-4.23-1.653-8.91-.23-5.06-.276-6.58-.276-19.398s.046-14.33.276-19.39c.214-4.68.996-7.22 1.653-8.912.87-2.24 1.912-3.84 3.592-5.52 1.68-1.68 3.28-2.72 5.52-3.592 1.692-.66 4.233-1.44 8.913-1.655 4.428-.2 6.144-.26 15.09-.27zm29.928 7.97c-3.18.0-5.76 2.577-5.76 5.758.0 3.18 2.58 5.76 5.76 5.76s5.76-2.58 5.76-5.76-2.58-5.76-5.76-5.76zm-25.622 6.73c-13.613.0-24.65 11.037-24.65 24.65s11.037 24.645 24.65 24.645S90.65 79.613 90.65 66 79.616 41.35 66.003 41.35zm0 8.65c8.836.0 16 7.163 16 16 0 8.836-7.164 16-16 16-8.837.0-16-7.164-16-16 0-8.837 7.163-16 16-16z"/></svg>
+</a>
+</nav>
+</div>
+</header>
+<div class="body u-center">
+<style>code,pre{font-family:Consolas,Menlo,Monaco,source-code-pro,monospace;hyphens:none;line-height:1.5;overflow:auto;tab-size:2;text-align:left;white-space:pre;word-break:normal;word-spacing:normal;word-wrap:normal}pre{background:#282c34;border-radius:4px;color:#fff;margin:0;overflow:auto;padding:16px}code{font-size:14px}:not(pre)>code{background:rgba(0,0,0,6%);border-radius:2px;color:#1a1a1a;padding:2px 4px 1px;white-space:normal}.highlight,pre.highlight{border-radius:4px;max-width:800px;margin:48px auto}.highlight .ge{font-style:italic}.highlight .gs{font-weight:700}.highlight .ow{font-weight:700}.highlight .n,.highlight .nf,.highlight .nn,.highlight .o,.highlight .p{color:#abb2bf}.highlight .c,.highlight .c1,.highlight .cm,.highlight .cp,.highlight .cs{color:#969696;font-style:italic}.highlight .sr,.highlight .ss{color:#56b6c2}.highlight .k,.highlight .kc,.highlight .kd,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kt{color:#dc64ff}.highlight .l,.highlight .ld,.highlight .s,.highlight .s1,.highlight .s2,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .se,.highlight .sh,.highlight .si,.highlight .sx{color:#8bdb51}.highlight .nt,.highlight .nx,.highlight .vi{color:#fb6666}.highlight .il,.highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo,.highlight .na{color:#e8e465}.highlight .bp,.highlight .nb,.highlight .nc,.highlight .nd,.highlight .ne,.highlight .ni,.highlight .nl,.highlight .no,.highlight .nv,.highlight .py,.highlight .vc,.highlight .vg{color:#e5c07b}.highlight .gd{color:#e05252}.highlight .gi{color:#43d08a}.highlight .w{color:#f8f8f2}.highlight .cpf{color:navy}.highlight .gu{color:#75715e}.highlight .lineno{color:#636d83;user-select:none}.highlight .ln{color:#636d83;user-select:none}.highlight .ln:after{content:" "}.highlight .hll,.highlight .hl{color:#abb2bf;background-color:#3a3f4b;display:block}.highlight .language-json .w+.s2{color:#e06c75}.highlight .language-json .kc{color:#56b6c2}.highlight{position:relative}.highlight .language-css::before{background:url(/images/tags/css.png);width:32px;height:32px;background-size:cover;content:'';border-radius:0;top:-12px}.highlight .language-html::before{background:url(/images/tags/html.png);width:32px;height:32px;background-size:cover;content:'';border-radius:0;top:-12px}.highlight .language-javascript::before{background:url(/images/tags/javascript.png);width:32px;height:32px;background-size:cover;content:'';border-radius:0;top:-12px}.highlight .language-sh::before{background:url(/images/tags/terminal.png);width:32px;height:32px;background-size:cover;content:'';border-radius:0;top:-12px}.highlight .language-svelte::before{background:url(/images/tags/svelte.png);width:32px;height:32px;background-size:cover;content:'';border-radius:0;top:-12px}.highlight .language-jsx::before{background:url(/images/tags/react.png);width:36px;height:32px;background-size:cover;content:'';border-radius:0;top:6px}.highlight .language-fallback::before{display:none}.highlight code::before{background:#fff;border-radius:4px;color:rgba(0,0,0,.7);content:attr(data-lang);font-size:12px;padding:2px 8px;position:absolute;right:8px;text-transform:lowercase;top:-8px}.highlight .lntable{border-spacing:0;width:100%}</style>
+<article id=article itemscope itemtype=http://schema.org/Article>
+<div id=article-content-wrapper>
+<div id=article-content>
+<header id=article-header>
+<picture>
+<img decoding=async itemprop=image alt="Imagen de la etiqueta node" src=/images/tags/node.png width=48 height=48>
+</picture>
+<div class=article-header-meta>
+<h1 itemprop=name>
+Cómo instalar Node en Mac, Linux y Windows
+</h1>
+<div id=article-meta>
+<time itemprop=datePublished datetime=2020-08-17T00:00:00Z>
+17 agosto 2020
+</time>
+·
+<span>6 minutos de lectura</span>
+·
+<a target=_blank rel="noopener nofollow" href=https://github.com/midudev/midu.dev/edit/master/content/posts/como-instalar-node-en-mac-y-windows.md>
+¿Una errata? Edita el artículo<svg viewBox="0 0 24 24"><path d="M12 .297c-6.63.0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577.0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93.0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176.0.0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22.0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22.0 1.606-.015 2.896-.015 3.286.0.315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+</a>
+</div>
+</div>
+</header>
+<div itemprop=articleBody>
+<p>Hoy en día <strong>Node y NPM son básicos a la hora de preparar tu entorno de desarrollo web</strong>. Y, aunque no es difícil conseguirlo, existen diferentes formas de lograrlo dependiendo del sistema operativo.</p>
+<blockquote>
+<p><strong>Importante</strong>: Estas guías dan por sentado que no tienes una instalación previa de Node.js. Si es así, es posible que pueda darte problemas y que haya conflictos. Antes de continuar, asegurate que has desinstalado cualquier instalación previa de Node.js y npm.</p>
+</blockquote>
+<h2 id=instalando-nodejs-usando-el-instalador-nativo>Instalando Node.js usando el instalador nativo</h2>
+<p><strong>La forma más sencilla de instalar Node.js</strong> en tu sistema es, sin ninguna duda, <a href=https://nodejs.org/es/>usar el instalador de la web oficial</a> donde podrás decidir entre usar la versión LTS o la actual.</p>
+<p><strong>Aunque es la más sencilla tiene una desventaja muy grande</strong> y es que esto hace que en todo tu sistema sólo cuentes con una versión de Node.js. Esto puede ser suficiente para algunos desarrolladores pero, normalmente, si trabajas en más de un proyecto puedes encontrar problemas fácilmente ya que cada proyecto puede soportar versiones diferentes de Node.js.</p>
+<p>Por ello, aunque para empezar puede estar bien, te recomiendo los siguientes métodos descritos en el artículo.</p>
+<h2 id=instalar-node-en-mac-linux-windows-wsl-usando-nvm>Instalar Node en Mac, Linux, Windows WSL usando nvm</h2>
+<p><strong>Esta sería la <a href=https://google.com>forma</a> recomendada si tu sistema operativo está basado en UNIX</strong> (como Mac, Linux o Windows WSL), ya que ofrece diferentes ventajas, como manejar diferentes versiones de Node al mismo tiempo. Muy útil cuando tienes que trabajar en diferentes proyectos.</p>
+<h3 id=qué-es-nvm>¿Qué es nvm?</h3>
+<p><strong>nvm es un gestor de versiones de Node.js</strong> diseñado para tener su instalación encapsulada por usuario, sin necesidad de permisos de administrador, e invocado de forma independiente por cada shell.</p>
+<h3 id=cómo-instalar-nvm-paso-a-paso>Cómo instalar nvm paso a paso</h3>
+<p>Para instalar, y también actualizar, <em>nvm</em> tienes que ejecutar el script de instalación. Puedes descargar y ejecutar el código desde la terminal usando el siguiente comando:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+</code></pre></div><p>Este script clonará el <a href=https://github.com/nvm-sh/nvm>repositorio de <code>nvm</code></a> en la ruta <code>~/.nvm</code> e intentará añadir las líneas de ejecución dependiendo del lenguaje de tu terminal (<code>~/.bash_profile</code>, <code>~/.zshrc</code>, <code>~/.profile</code> o <code>~/.bashrc</code>).</p>
+<p>En el caso que, por lo que sea, no haya sido posible. Es posible que te pida que añadas manualmente las líneas de código. <strong>Esto es sólo necesario si no ha sido posible hacerlo de forma automática.</strong> Las líneas a añadir serían estas:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>export NVM_DIR=&#34;$([ -z &#34;${XDG_CONFIG_HOME-}&#34; ] &amp;&amp; printf %s &#34;${HOME}/.nvm&#34; || printf %s &#34;${XDG_CONFIG_HOME}/nvm&#34;)&#34;
+[ -s &#34;$NVM_DIR/nvm.sh&#34; ] &amp;&amp; \. &#34;$NVM_DIR/nvm.sh&#34; # Esto carga nvm
+</code></pre></div><p>Después de hacer esto es posible que necesites reiniciar la terminal o crear una nueva pestaña para poder utilizar el comando <code>nvm</code>.</p>
+<h4 id=instala-la-versión-que-quieras-de-node>Instala la versión que quieras de Node</h4>
+<p>Una vez tengas <code>nvm</code> en tu sistema es el momento de instalar Node. Para ello sólo tienes que ejecutar el siguiente comando:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>nvm install --lts
+</code></pre></div><p>Esto te ejecutará la versión <strong>long-term support de Node</strong>. En estos momentos es la 12 pero muy pronto será la 14 y, más adelante, pasará a ser la 16. Tenéis <strong>el plan de lanzamientos con todas las próximas versiones LTS.</strong></p>
+<blockquote>
+<p>LTS o <strong>long-term support</strong> significa que es una versión que recibirá soporte durante un plazo más largo que otras versiones. Generalmente son hasta 30 meses de soporte para errores críticos. Si vas a usar Node en producción, lo mejor es que uses sólo versiones LTS.</p>
+</blockquote>
+<p>Si lo prefieres, también puedes instalar una versión en específico ya sea indicando la major o, directamente, la versión exacta:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>nvm install 12 # esto instalará la última versión 12 de Node.js
+nvm install 12.18.3 # esto instalará exactamente la versión 12.18.3
+</code></pre></div><h4 id=usando-una-versión-de-nodejs-con-nvm>Usando una versión de Node.js con nvm</h4>
+<p>A veces es posible que tengas más de una versión instalada de Node.js en tu usuario. Para ver todas las versiones de Node.js que tienes instaladas, puedes usar el comando <code>nvm ls</code>. Para ver las versiones disponibles a instalar tienes que usar <code>nvm ls-remote</code>.</p>
+<p>Una vez tengas en tu sistema más de uno, vas a querer cambiar entre esas versiones. Para ello ejecuta <code>nvm use &lt;version-que-quieres-usar></code> por ejemplo:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>nvm use 12
+nvm use 8
+nvm use --lts
+</code></pre></div><p>Si quieres que alguna de estas sea tu versión por defecto, de forma que sea la que se usa la próxima vez que abras una pestaña, tienes que crear un alias para esa versión que se llame <code>default</code>.</p>
+<p>Por ejemplo, imaginemos que tenemos instalada la versión 8 y 12 y ahora instalamos la 14 y queremos que esta sea la versión por defecto a partir de ahora. Deberíamos hacer lo siguiente:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>nvm install 14
+nvm alias default 14
+</code></pre></div><blockquote>
+<p>La primera vez que ejecutas <code>nvm install</code> hará que esa versión sea la <code>default</code>.</p>
+</blockquote>
+<h3 id=posibles-problemas>Posibles problemas&mldr;</h3>
+<ul>
+<li>En Mac vas a necesitar tener instalas las herramientas de desarrollo de Xcode. Cuando ejecutes por primera vez el script de instalación de <code>nvm</code> es posible que te aparezca una ventana pidiendo que lo hagas. Una vez instalada, prueba otra vez a instalar <code>nvm</code> con el mismo script que antes.</li>
+<li>Recuerda, como he comentado, al terminar la instalación es posible que necesites reiniciar la terminal o crear una nueva pestaña antes de poder ejecutar el comando <code>nvm</code>.</li>
+<li>Si tienes algún problema más, puedes ver la sección de <a href=https://github.com/nvm-sh/nvm#troubleshooting-on-linux>Problemas Frecuentes en el repositorio de nvm.</a></li>
+</ul>
+<h2 id=instalar-node-en-windows-usando-nvm-windows>Instalar Node en Windows usando nvm-windows</h2>
+<p><code>nvm-windows</code> aunque comparte el nombre con <code>nvm</code> no son de los mismos creadores y, por lo tanto, tiene algunas diferencias. Y entre esas diferencias está también, claro, la forma de instalarlo. Para el caso de <code>nvm-windows</code> estos son los pasos que debes seguir:</p>
+<ol>
+<li>Ve a la <a href=https://github.com/coreybutler/nvm-windows/releases>sección de releases de nvm-windows</a>.</li>
+<li>Descarga el archivo <code>nvm-setup.zip</code> de la última release disponible.</li>
+<li>Extrae y ejecuta el archivo <code>nvm-setup.exe</code>.</li>
+<li>Sigue los pasos de la instalación guiada del paquete y elige la configuración que desees.</li>
+<li>Una vez completado, abre una terminal <code>Power Shell</code> y ejecuta:</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>nvm ls
+</code></pre></div><p>En ese momento el comando funcionará pero te dará el mensaje <code>"No installations recognized"</code>.</p>
+<h3 id=listando-e-instalando-nodejs-con-nvm-windows>Listando e instalando Node.js con nvm-windows</h3>
+<p>Ahora podemos listar todas las versiones disponibles para instalar con <code>nvm list available</code>. Una vez que de la lista veas la version que quieres instalar, debes ejecutar el comando <code>nvm install</code> junto con la versión deseada:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>nvm list available
+nvm install 12.18.3
+</code></pre></div><p>Una vez que tengas diferentes versiones instaladas, puedes listarlas con <code>nvm ls</code> y cambiar entre las diferentes versiones con <code>nvm use</code>:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>nvm ls
+
+  12.18.3
+  14.5.0
+
+nvm use 14.5.0
+</code></pre></div><p>Y con esto ya estaríamos preparados para trabajar con <code>nvm-windows</code>. Si tienes algún problema, puedes <strong>revisar la <a href=https://github.com/coreybutler/nvm-windows/wiki/Common-Issues>sección de &ldquo;Problemas frecuentes&rdquo; del repositorio</a> para ver si tienen solución a tu problema.</strong></p>
+</div>
+<div id=article-pagination>
+<a class=prev href=https://midu.dev/curso-gratis-next-js-framework-de-react-2020/>
+<img decoding=async alt=nextjs loading=lazy src=/images/tags/nextjs.png width=64 height=64>
+Curso gratis de NextJS, el framework de React
+</a>
+<a class=next href=https://midu.dev/como-crear-un-time-ago-sin-dependencias-intl-relativeformat/>
+<img decoding=async alt=javascript loading=lazy src=/images/tags/javascript.png width=64 height=64>
+Cómo crear un TimeAgo sin dependencias usando Intl.RelativeTimeFormat
+</a>
+</div>
+</div>
+</div>
+</article>
+<style>#TableOfContents-container{display:none}@media(min-width:1300px){#TableOfContents-container{display:block;position:fixed;right:32px}#TableOfContents-container h3{font-size:14px;padding-bottom:8px}#TableOfContents ul{list-style:none;padding-left:0;padding-bottom:0;max-width:200px}#TableOfContents ul li{margin-bottom:8px}#TableOfContents ul li.active a{background-color:#d0edff}#TableOfContents ul ul{list-style:none;color:#444;padding-left:8px;margin-top:8px}#TableOfContents ul ul li:before{content:'-';padding-right:4px}#TableOfContents a{color:#555;display:inline;font-weight:500;font-size:12px;line-height:1}#TableOfContents a code{font-size:12px}#TableOfContents a:hover{background-color:#d0edff}#TableOfContents ul ul a{color:#777}}</style>
+<div id=TableOfContents-container>
+<h3>Contenido del artículo</h3>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#instalando-nodejs-usando-el-instalador-nativo>Instalando Node.js usando el instalador nativo</a></li>
+<li><a href=#instalar-node-en-mac-linux-windows-wsl-usando-nvm>Instalar Node en Mac, Linux, Windows WSL usando nvm</a>
+<ul>
+<li><a href=#qué-es-nvm>¿Qué es nvm?</a></li>
+<li><a href=#cómo-instalar-nvm-paso-a-paso>Cómo instalar nvm paso a paso</a></li>
+<li><a href=#posibles-problemas>Posibles problemas&mldr;</a></li>
+</ul>
+</li>
+<li><a href=#instalar-node-en-windows-usando-nvm-windows>Instalar Node en Windows usando nvm-windows</a>
+<ul>
+<li><a href=#listando-e-instalando-nodejs-con-nvm-windows>Listando e instalando Node.js con nvm-windows</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<style>#share{bottom:16px;left:0;display:flex;position:fixed;right:0;width:100%;justify-content:center;z-index:1}#share a{background:#fff;border-radius:32px;bottom:0;box-shadow:rgba(100,110,140,.4)0 6px 21px 2px;color:#333;display:flex;font-size:14px;font-weight:500;margin:0 16px;padding:8px 16px;text-align:center;align-self:center;align-items:center}#share a:hover{background:#dcf1ff}#share svg{align-self:center;display:inline-flex;margin-left:4px}</style>
+<div id=share>
+<a target=_blank rel="nofollow noopener" href='https://twitter.com/share?url=https%3a%2f%2fmidu.dev%2fcomo-instalar-node-en-mac-y-windows%2f&text="C%c3%b3mo%20instalar%20Node%20en%20Mac%2c%20Linux%20y%20Windows" por @midudev'>
+<span>Comparte el artículo</span><svg viewBox="0 0 612 612" width="24"><path d="M612 116.258a250.714 250.714.0 01-72.088 19.772c25.929-15.527 45.777-40.155 55.184-69.411-24.322 14.379-51.169 24.82-79.775 30.48-22.907-24.437-55.49-39.658-91.63-39.658-69.334.0-125.551 56.217-125.551 125.513.0 9.828 1.109 19.427 3.251 28.606-104.326-5.24-196.835-55.223-258.75-131.174-10.823 18.51-16.98 40.078-16.98 63.101.0 43.559 22.181 81.993 55.835 104.479A125.556 125.556.0 0124.629 232.21v1.568c0 60.806 43.291 111.554 100.693 123.104-10.517 2.83-21.607 4.398-33.08 4.398-8.107.0-15.947-.803-23.634-2.333 15.985 49.907 62.336 86.199 117.253 87.194-42.947 33.654-97.099 53.655-155.916 53.655-10.134.0-20.116-.612-29.944-1.721 55.567 35.681 121.536 56.485 192.438 56.485 230.948.0 357.188-191.291 357.188-357.188l-.421-16.253c24.666-17.593 46.005-39.697 62.794-64.861z" fill="#1da1f2"/></svg>
+</a>
+</div>
+</div>
+<footer>
+<section class=u-center>
+<a href=mailto:miduga@gmail.com rel="noopener nofollow" aria-label=Contact>
+Contacto
+</a>
+<a href=/index.xml target=_blank rel="noopener nofollow" aria-label="Suscríbete al feed RSS">
+RSS
+</a>
+<a href=https://twitch.tv/midudev target=_blank rel="noopener nofollow" aria-label="Twitch de @midudev">
+Twitch
+</a>
+<a href=https://github.com/midudev target=_blank rel="noopener nofollow" aria-label="Github de @midudev">
+GitHub
+</a>
+<a href=https://youtube.com/midudev target=_blank rel="noopener nofollow" aria-label="Canal de Youtube de @midudev">
+YouTube
+</a>
+<a href=https://twitter.com/midudev target=_blank rel="noopener nofollow" aria-label="Twitter de @midudev">
+Twitter
+</a>
+<a href=https://www.instagram.com/midu.dev/ target=_blank rel="noopener nofollow" aria-label="Instagram de midudev">
+Instagram
+</a>
+<a href=/newsletter/ aria-label="Newsletter de @midudev">
+Newsletter
+</a>
+</section>
+<img class=footer-emote src=/images/midudev-this-is-fine.png lazy=loading decoding=async width=36 alt="This is fine Midudev logo">
+</footer>
+<script>const loadedScripts=[];function loadScript(a){return loadedScripts.includes(a)?Promise.resolve():new Promise(function(e,f){const b=document.createElement('script');let c=!1;b.type='text/javascript',b.src=a,b.async=!0,b.onerror=function(a){f(a,b)},b.onload=b.onreadystatechange=function(){!c&&(!this.readyState||this.readyState==='complete')&&(c=!0,loadedScripts.push(a),e())};const d=document.getElementsByTagName('script')[0];d.parentElement.insertBefore(b,d)})}function createYoutubeFrame(a){const b="<div id='lightbox'><a href='#'><svg width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='#fff' stroke-width='1' stroke-linecap='square' stroke-linejoin='arcs'><line x1='18' y1='6' x2='6' y2='18'></line><line x1='6' y1='6' x2='18' y2='18'></line></svg></a> <section> <div> <iframe src='https://www.youtube.com/embed/"+a+"?autoplay=1' width='560' height='315' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div></section></div>",c=document.createRange().createContextualFragment(b);document.body.appendChild(c),document.querySelector('#lightbox a').addEventListener('click',function(b){b.preventDefault();const a=document.getElementById('lightbox');a.parentNode.removeChild(a)},{once:!0})}document.querySelectorAll('.youtube-link').forEach(function(a){a.addEventListener('click',function(a){a.preventDefault();const b=this.getAttribute('data-id');createYoutubeFrame(b)})});class LiteYTEmbed extends window.HTMLElement{async connectedCallback(){this.videoId=this.getAttribute('videoid');let a=this.querySelector('.lty-playbtn');this.playLabel=a&&a.textContent.trim()||this.getAttribute('playlabel')||'Play';const b=await LiteYTEmbed.checkWebPSupport();if(this.posterUrl=b?`https://i.ytimg.com/vi_webp/${this.videoId}/hqdefault.webp`:`https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg`,LiteYTEmbed.addPrefetch('preload',this.posterUrl,'image'),this.style.backgroundImage=`url("${this.posterUrl}")`,a||(a=document.createElement('button'),a.type='button',a.classList.add('lty-playbtn'),this.append(a)),!a.textContent){const b=document.createElement('span');b.className='lyt-visually-hidden',b.textContent=this.playLabel,a.append(b)}this.addEventListener('pointerover',LiteYTEmbed.warmConnections,{once:!0}),this.addEventListener('click',a=>this.addIframe())}static addPrefetch(c,d,b){const a=document.createElement('link');a.rel=c,a.href=d,b&&(a.as=b),document.head.append(a)}static checkWebPSupport(){return typeof LiteYTEmbed.hasWebPSupport!='undefined'?Promise.resolve(LiteYTEmbed.hasWebPSupport):new Promise(c=>{const b=a=>{LiteYTEmbed.hasWebPSupport=a,c(a)},a=new window.Image;a.onload=()=>b(!0),a.onerror=()=>b(!1),a.src='data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA='})}static warmConnections(){if(LiteYTEmbed.preconnected)return;LiteYTEmbed.addPrefetch('preconnect','https://www.youtube-nocookie.com'),LiteYTEmbed.addPrefetch('preconnect','https://www.google.com'),LiteYTEmbed.addPrefetch('preconnect','https://googleads.g.doubleclick.net'),LiteYTEmbed.addPrefetch('preconnect','https://static.doubleclick.net'),LiteYTEmbed.preconnected=!0}addIframe(){const b=new URLSearchParams(this.getAttribute('params')||[]);b.append('autoplay','1');const a=document.createElement('iframe');a.width=560,a.height=315,a.title=this.playLabel,a.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',a.allowFullscreen=!0,a.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${b.toString()}`,this.append(a),this.classList.add('lyt-activated'),this.querySelector('iframe').focus()}}window.customElements.define('lite-youtube',LiteYTEmbed);const intersectionObserverOptions={rootMargin:'0px',threshold:1},$share=document.getElementById('share');if($share){const a=document.getElementById('article-pagination'),b=document.querySelector('footer'),c=a||b,d=function(b){const[a]=b,c=a.boundingClientRect.top<=0||a.isIntersecting;$share.classList.toggle('u-none',c)},e=new window.IntersectionObserver(d,intersectionObserverOptions);e.observe(c)}const ALGOLIA_APPLICATION_ID='QK9VV9YO5F',ALGOLIA_SEARCH_ONLY_API_KEY='247bb355c786b6e9f528bc382cab3039';let algoliaIndex;const $form=document.querySelector('.ais-SearchBox-form'),$input=document.querySelector('.ais-SearchBox-input'),$reset=document.querySelector('.ais-SearchBox-reset'),$hits=document.querySelector('#hits');function getAlgoliaIndex(){if(algoliaIndex)return algoliaIndex;const a=window.algoliasearch(ALGOLIA_APPLICATION_ID,ALGOLIA_SEARCH_ONLY_API_KEY,{_useRequestCache:!0});return algoliaIndex=a.initIndex('prod_blog_content'),algoliaIndex}$form.addEventListener('submit',function(a){a.preventDefault()}),$reset.addEventListener('click',function(a){$input.value='',$hits.innerHTML=''}),$input.addEventListener('input',async function(b){await loadScript('https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js');const{value:a}=b.target;a===''&&($hits.innerHTML='',$reset.setAttribute('hidden')),$reset.removeAttribute('hidden'),$hits.removeAttribute('hidden');const c=getAlgoliaIndex();c.search(a,{hitsPerPage:3}).then(({hits:b})=>{let a='';b.forEach(b=>{const{link:c,_highlightResult:{title:{value:d},description:{value:e}}}=b;a+=`
+      <li class='ais-Hits-item'>
+        <a href='${c}'>
+          ${d}
+          <div>
+            <small>${e}</small>
+          </div>
+        </a>
+      </li>`}),$hits.innerHTML=a})});function initTableOfContents(){const a=document.querySelector('#TableOfContents-container li');if(!a)return null;a.classList.add('active');const b=document.querySelectorAll('#TableOfContents-container li a'),c=a=>{a.forEach(a=>{const{target:c,isIntersecting:d,intersectionRatio:e}=a;if(d&&e>=.5){const a=c.getAttribute('id');document.querySelector('#TableOfContents-container li.active').classList.remove('active'),document.querySelector(`nav li a[href="#${a}"]`).parentElement.classList.add('active'),b.forEach(a=>{a.addEventListener('click',b=>{document.querySelector('#TableOfContents-container li.active').classList.remove('active'),a.parentElement.classList.add('active')})})}})},d={threshold:.5,rootMargin:'50px 0px -55% 0px'},e=new window.IntersectionObserver(c,d),f=document.querySelectorAll('#article-content h2');f.forEach(a=>e.observe(a))}initTableOfContents()</script>
+</body>
+</html>
