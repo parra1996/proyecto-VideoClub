@@ -25,23 +25,3 @@ module.exports = {
 "dialect": "mysql"
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
