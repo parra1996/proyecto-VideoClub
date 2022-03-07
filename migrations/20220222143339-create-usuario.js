@@ -23,6 +23,12 @@ module.exports = {
         allowNull: false,
         unique: true
       },
+      telefono: {
+        type: Sequelize.INTEGER
+      },
+      dni: {
+        type: Sequelize.STRING
+      },
       password: {
         type: Sequelize.STRING
       },

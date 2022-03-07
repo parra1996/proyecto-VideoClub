@@ -40,21 +40,18 @@ UsuarioController.traerUsuarioEmail = (req, res) => {
 
 UsuarioController.registraUsuario = async (req, res) => {
     
-    //Registrando un usuario
     
         let name = req.body.name;
         let age = req.body.age;
         let surname = req.body.surname;
-        // let nickname = req.body.nickname;
         let email = req.body.email;
+        let dni = req.body.dni;
+        let telefono = req.body.telefono;
         console.log("antes de encriptar",req.body.password);
         let password = bcrypt.hashSync(req.body.password, Number.parseInt(authConfig.rounds)); 
         
         console.log("este es el password", password);
-        //Comprobación de errores.....
         
-        //Guardamos en sequelize el usuario
-
         Usuario.findAll({
             where : {
 
@@ -77,6 +74,8 @@ UsuarioController.registraUsuario = async (req, res) => {
                     surname: surname,
                     email: email,
                     password: password,
+                    dni: dni,
+                    telefono:telefono
                 }).then(usuario => {
                     res.send(`${usuario.name}, bienvenida a este infierno`);
                 })
