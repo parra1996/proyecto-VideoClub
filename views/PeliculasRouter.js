@@ -10,8 +10,7 @@ const PeliculasController = require('../controllers/PeliculasController');
 
 //CRUD RESTful
 
-//Leer todas las peliculas
-// router.get('/', auth, PeliculasController.importaPeliculas);
+router.get('/importadas', PeliculasController.importaPeliculas);
 
 router.get('/todas', auth, PeliculasController.traePelicula);
 

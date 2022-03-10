@@ -5,6 +5,17 @@ const { compareSync } = require("bcrypt");
 
 const PeliculasController = {};
 
+PeliculasController.importaPeliculas = async (req,res) => {
+   try{
+ let peliculas = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=210d6a5dd3f16419ce349c9f1b200d6d&language=en-US&page=1");
+
+ res.send(peliculas.data);
+   } catch (err){
+       res.send(err);
+   }
+
+}
+
 PeliculasController.traePelicula = (req,res) => {
       //Búsqueda trayendo a todos los usuarios
       Pelicula.findAll()
