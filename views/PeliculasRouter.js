@@ -14,7 +14,7 @@ router.get('/importadas', PeliculasController.importaPeliculas);
 
 router.post('/importadas2', PeliculasController.importaPeliculas2);
 
-router.get('/todas', auth, PeliculasController.traePelicula);
+router.get('/todas', PeliculasController.traePelicula);
 
 router.get('/:id', auth, PeliculasController.traerPeliculaId);
 
