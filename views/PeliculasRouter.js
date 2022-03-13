@@ -12,6 +12,8 @@ const PeliculasController = require('../controllers/PeliculasController');
 
 router.get('/importadas', PeliculasController.importaPeliculas);
 
+router.post('/importadas2', PeliculasController.importaPeliculas2);
+
 router.get('/todas', auth, PeliculasController.traePelicula);
 
 router.get('/:id', auth, PeliculasController.traerPeliculaId);
@@ -31,6 +33,8 @@ router.get('/titulo',auth, PeliculasController.peliculasImportadasTitulo);
 router.get('/novedades', auth,PeliculasController.traeNovedades);
 
 router.delete('/:id', isAdmin, PeliculasController.deleteById);
+
+router.delete('/', isAdmin, PeliculasController.deleteAll);
 
 
 
