@@ -29,6 +29,14 @@ PedidosController.nuevoPedido = (req,res) => {
     }))
 }
 
+PedidosController.pedidoId = () => {
+    Pedido.findByPk(req.params.id)
+    .then(data => {
+        res.send(data)
+    });
+    
+}
+
 PedidosController.todosPedidos = async (req,res) => {
 
     // let consulta = `SELECT usuarios.name AS nombre, peliculas.titulo AS titulo, usuarios.email AS correo
