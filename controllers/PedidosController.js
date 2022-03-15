@@ -29,12 +29,13 @@ PedidosController.nuevoPedido = (req,res) => {
     }))
 }
 
-PedidosController.pedidoId = () => {
-    Pedido.findByPk(req.params.id)
+PedidosController.pedidoId = (req,res) => {
+
+    Pedido.findAll({ where : { id : req.params.id }})
     .then(data => {
+        console.log(data)
         res.send(data)
     });
-    
 }
 
 PedidosController.todosPedidos = async (req,res) => {

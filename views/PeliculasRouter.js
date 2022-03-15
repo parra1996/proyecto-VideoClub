@@ -18,7 +18,7 @@ router.get('/todas', PeliculasController.traePelicula);
 
 router.get('/:id', auth, PeliculasController.traerPeliculaId);
 
-router.get('/titulo/:titulo', auth, PeliculasController.traerPeliculaTitulo);
+router.get('/titulo/:titulo', PeliculasController.traerPeliculaTitulo);
 //Registro de una peli nueva
 router.post('/', PeliculasController.registraPelicula);
 
