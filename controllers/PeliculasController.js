@@ -72,7 +72,7 @@ PeliculasController.traerPeliculaId = (req, res) => {
 
 PeliculasController.traerPeliculaTitulo = (req, res) => {
     //Búsqueda comparando un campo
-    Pelicula.findOne({ where : { titulo : req.params.titulo }})
+    Pelicula.findAll({ where : { titulo : req.params.titulo }})
     .then(data => {
         console.log(data)
         res.send(data)
