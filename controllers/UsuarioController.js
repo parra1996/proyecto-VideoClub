@@ -47,6 +47,7 @@ UsuarioController.registraUsuario = async (req, res) => {
         let email = req.body.email;
         let dni = req.body.dni;
         let telefono = req.body.telefono;
+        let rol = req.body.rol;
         console.log("antes de encriptar",req.body.password);
         let password = bcrypt.hashSync(req.body.password, Number.parseInt(authConfig.rounds)); 
         
@@ -75,7 +76,8 @@ UsuarioController.registraUsuario = async (req, res) => {
                     email: email,
                     password: password,
                     dni: dni,
-                    telefono:telefono
+                    telefono:telefono,
+                    rol : rol
                 }).then(usuario => {
                     res.send(`${usuario.name}, bienvenida a este infierno`);
                 })

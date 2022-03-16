@@ -35,7 +35,6 @@ module.exports = {
       rol: {
         type: Sequelize.BOOLEAN,
         //este método se usa para dar un valor por defecto
-        defaultValue: false,
       },
       createdAt: {
         allowNull: false,
