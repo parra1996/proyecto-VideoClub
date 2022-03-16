@@ -223,24 +223,24 @@ UsuarioController.logUsuario = (req, res) => {
 
     Usuario.findOne({
         where : {email : correo}
-    }).then(Usuario => {
+    }).then(element => {
 
-        if(!Usuario){
+        if(!element){
             res.send("Usuario o contraseña inválido");
         }else {
             //el usuario existe, por lo tanto, vamos a comprobar
             //si el password es correcto
 
-            if (bcrypt.compareSync(password, Usuario.password)) { //COMPARA CONTRASEÑA INTRODUCIDA CON CONTRASEÑA GUARDADA, TRAS DESENCRIPTAR
+            if (bcrypt.compareSync(password, element.password)) { //COMPARA CONTRASEÑA INTRODUCIDA CON CONTRASEÑA GUARDADA, TRAS DESENCRIPTAR
 
-                console.log(Usuario.password);
+                console.log(element.password);
 
-                let token = jwt.sign({ usuario: Usuario }, authConfig.secret, {
+                let token = jwt.sign({ usuario: element }, authConfig.secret, {
                     expiresIn: authConfig.expires
                 });
 
                 res.json({
-                    usuario: Usuario,
+                    usuario: element,
                     token: token
                 })
             } else {
