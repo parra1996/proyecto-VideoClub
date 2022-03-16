@@ -43,9 +43,9 @@ PeliculasController.importaPeliculas2 = async () => {
                 Film.create({
                     //A la izquierda mis campos de mi BBDD
                     //A la derecha los campos que devuelve TMDB
-                    title : resultss.data.results[i].original_title,
-                    synopsis : resultss.data.results[i].overview,
-                    adult : resultss.data.results[i].adult,
+                    titulo : resultss.data.results[i].original_title,
+                    sinopsis : resultss.data.results[i].overview,
+                    fecha : resultss.data.results[i].date,
                     popularity : resultss.data.results[i].popularity,
                     image : (TMDBimgUrlRoot + "/" + resultss.data.results[i].poster_path)
                 })
