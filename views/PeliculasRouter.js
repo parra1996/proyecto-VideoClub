@@ -12,7 +12,7 @@ const PeliculasController = require('../controllers/PeliculasController');
 
 router.get('/importadas', PeliculasController.importaPeliculas);
 
-router.post('/importadas2', PeliculasController.importaPeliculas2);
+router.get('/importadas2', PeliculasController.importaPeliculas2);
 
 router.get('/todas', PeliculasController.traePelicula);
 
