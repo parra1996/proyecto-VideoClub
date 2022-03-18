@@ -29,13 +29,18 @@ PedidosController.nuevoPedido = (req,res) => {
     }))
 }
 
-PedidosController.pedidoId = (req,res) => {
+PedidosController.pedidoId = async (req,res) => {
 
-    Pedido.findAll({ where : { id : req.params.id }})
-    .then(data => {
-        console.log(data)
-        res.send(data)
-    });
+    let id = req.params.id
+    let consulta = `SELECT usuarios.name AS name, peliculas.titulo AS titulo ,  usuarios.email AS email, peliculas.image AS image
+    FROM usuarios INNER JOIN pedidos 
+    ON usuarios.id = pedidos.usuarioId INNER JOIN peliculas
+    ON peliculas.id = pedidos.peliculaId WHERE usuarios.id = ${id}`;
+    let resultado = await Pedido.sequelize.query(consulta,{
+        type: Pedido.sequelize.QueryTypes.SELECT});
+    if(resultado){
+        res.send(resultado);
+    }
 }
 
 PedidosController.todosPedidos = async (req,res) => {
