@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       popularity: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       createdAt: {
         allowNull: false,
