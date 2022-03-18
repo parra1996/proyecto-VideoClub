@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       titulo: {
-        type: Sequelize.TEXT
+        type: Sequelize.STRING
       },
       sinopsis: {
         type: Sequelize.TEXT
@@ -20,8 +20,8 @@ module.exports = {
       image: {
         type: Sequelize.STRING
       },
-      fecha: {
-        type: Sequelize.DATE
+      popularity: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

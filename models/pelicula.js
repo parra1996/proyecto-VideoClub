@@ -16,11 +16,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Pelicula.init({
-    titulo: DataTypes.TEXT,
+    titulo: DataTypes.STRING,
     sinopsis: DataTypes.TEXT,
     adult: DataTypes.BOOLEAN,
+    popularity: DataTypes.INTEGER,
     image: DataTypes.STRING,
-    fecha: DataTypes.DATE
 
   }, {
     sequelize,

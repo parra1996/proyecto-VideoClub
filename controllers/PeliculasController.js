@@ -45,6 +45,7 @@ PeliculasController.importaPeliculas2 = async () => {
                     titulo : resultss.data.results[i].original_title,
                     sinopsis : resultss.data.results[i].overview,
                     adult : resultss.data.results[i].adult,
+                    popularity : resultss.data.results[i].popularity,
                     image : (TMDBimgUrlRoot + "/" + resultss.data.results[i].poster_path)
                 })
             }
