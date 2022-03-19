@@ -45,7 +45,7 @@ PedidosController.pedidoId = async (req,res) => {
 
 PedidosController.todosPedidos = async (req,res) => {
 
-    let consulta = `SELECT usuarios.name AS name, peliculas.titulo AS titulo , peliculas.popularity AS popularity, usuarios.email AS email
+    let consulta = `SELECT usuarios.name AS name, peliculas.titulo AS titulo, pedidos.id AS id, peliculas.popularity AS popularity, usuarios.email AS email
     FROM usuarios INNER JOIN pedidos 
     ON usuarios.id = pedidos.usuarioId INNER JOIN peliculas 
     ON peliculas.id = pedidos.peliculaId `; 
