@@ -45,21 +45,22 @@ PedidosController.pedidoId = async (req,res) => {
 
 PedidosController.todosPedidos = async (req,res) => {
 
-    // let consulta = `SELECT usuarios.name AS nombre, peliculas.titulo AS titulo, usuarios.email AS correo
-    // FROM usuarios INNER JOIN pedidos 
-    // ON usuarios.id = pedidos.usuarioId INNER JOIN peliculas`; 
+    let consulta = `SELECT usuarios.name AS name, peliculas.titulo AS titulo , peliculas.popularity AS popularity, usuarios.email AS email
+    FROM usuarios INNER JOIN pedidos 
+    ON usuarios.id = pedidos.usuarioId INNER JOIN peliculas 
+    ON peliculas.id = pedidos.peliculaId `; 
 
-    // let resultado = await Pedido.sequelize.query(consulta,{
-    //     type: Pedido.sequelize.QueryTypes.SELECT});
+    let resultado = await Pedido.sequelize.query(consulta,{
+        type: Pedido.sequelize.QueryTypes.SELECT});
 
-    // if(resultado){
-    //     res.send(resultado);
-    // }
+    if(resultado){
+        res.send(resultado);
+    }
 
-        Pedido.findAll()
-        .then(data => {
-            res.send(data)
-        });
+        // Pedido.findAll()
+        // .then(data => {
+        //     res.send(data)
+        // });
     };
 
 PedidosController.deleteById = (req,res) => {
