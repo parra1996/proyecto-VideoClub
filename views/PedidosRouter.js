@@ -12,7 +12,7 @@ router.post('/', PedidosController.nuevoPedido);
 
 router.get('/', auth, PedidosController.todosPedidos);
 
-router.post('/:id', auth, PedidosController.pedidoId )
+router.post('/:id', PedidosController.pedidoId )
 
 router.delete('/:id', auth, isAdmin, PedidosController.deleteById);
 
