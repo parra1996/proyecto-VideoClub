@@ -99,21 +99,34 @@ UsuarioController.registraUsuario = async (req, res) => {
 UsuarioController.updateProfile = async (req, res) => {
 
     let datos = req.body;
-
-    let id = req.params.id;
-
     try {
-
-        Usuario.update(datos, {
-            where: {id : id}
+        Usuario.update(
+            datos,
+            {
+            where: {id : datos.id}
         })
         .then(actualizado => {
+            console.log("Electrico", actualizado)
             res.send(actualizado);
         });
-
     } catch (error) {
-
+        res.send(error);
     }
+
+    /*  let datos = req.body;
+    try {
+        Usuario.update(
+            datos,
+            {
+            where: {id : datos.id}
+        })
+        .then(actualizado => {
+            console.log("Electrico", actualizado)
+            res.send(actualizado);
+        });
+    } catch (error) {
+        res.send(error);
+    }*/ 
 
 };
 
